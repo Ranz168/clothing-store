@@ -1,0 +1,328 @@
+/* Men Page */
+.men-page {
+  background-color: white;
+}
+
+/* Page Header */
+.men-page .page-header {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #34495e 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.men-page .page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.men-page .page-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Products Section */
+.men-page .products {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.men-page .products-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.men-page .products-header h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.men-page .products-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.men-page .products-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.men-page .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.men-page .product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+}
+
+.men-page .product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.men-page .product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+  background-color: var(--primary-color);
+}
+
+.men-page .product-badge.sale {
+  background-color: var(--sale-color);
+}
+
+.men-page .product-badge.new {
+  background-color: var(--new-color);
+}
+
+.men-page .product-badge.limited {
+  background-color: var(--limited-color);
+}
+
+.men-page .product-image {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.men-page .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.men-page .product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.men-page .product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.men-page .product-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  
+  /* Multi-line text truncation with full browser compatibility */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  display: box;
+  line-clamp: 2;
+  box-orient: vertical;
+  text-overflow: ellipsis;
+  min-height: 2.8em;
+  line-height: 1.4;
+}
+
+.men-page .product-category {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.men-page .product-description {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  
+  /* Multi-line text truncation with full browser compatibility */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  display: box;
+  line-clamp: 2;
+  box-orient: vertical;
+  text-overflow: ellipsis;
+  min-height: 2.8em;
+}
+
+.men-page .price-container {
+  margin-bottom: 15px;
+}
+
+.men-page .price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.men-page .original-price {
+  text-decoration: line-through;
+  color: var(--text-light);
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.men-page .product-options {
+  margin-bottom: 15px;
+}
+
+.men-page .product-options .option-group {
+  margin-bottom: 10px;
+}
+
+.men-page .product-options .option-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+}
+
+.men-page .product-options .option-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: white;
+}
+
+.men-page .product-options .option-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+/* Add this to each page's CSS file to ensure proper spacing */
+.men-page .page-banner,
+.women-page .page-banner,
+.product-list-page .page-banner {
+  margin-top: 50px;
+}
+.men-page .add-to-cart {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.men-page .add-to-cart:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .men-page .page-header {
+    padding: 60px 0;
+  }
+  
+  .men-page .page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .men-page .products {
+    padding: 60px 0;
+  }
+  
+  .men-page .products-header h2 {
+    font-size: 2rem;
+  }
+  
+  .men-page .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-page .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.men-page .page-hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.men-page .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.men-page .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.men-page .hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.men-page .hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.men-page .hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .men-page .page-hero {
+    height: 250px;
+  }
+  
+  .men-page .hero-content {
+    padding-top: 60px;
+  }
+  
+  .men-page .hero-content h1 {
+    font-size: 2rem;
+  }
+}

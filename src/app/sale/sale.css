@@ -1,0 +1,237 @@
+/* Sale Page Styles */
+.sale-page {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.sale-page .page-hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.sale-page .page-hero .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sale-page .page-hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.sale-page .page-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.sale-page .page-hero .hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sale-page .page-hero .hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Sale Content */
+.sale-page .sale-content {
+  padding: 4rem 0;
+  background: white;
+}
+
+.sale-page .sale-content .sale-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sale-page .sale-content .sale-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sale-page .sale-content .sale-item:hover {
+  transform: translateY(-5px);
+}
+
+.sale-page .sale-content .sale-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.sale-page .sale-content .sale-item .sale-info {
+  padding: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.sale-page .sale-content .sale-item .sale-info h3 {
+  margin-bottom: 0.5rem;
+  color: #e74c3c;
+  font-size: 1.4rem;
+}
+
+.sale-page .sale-content .sale-item .sale-info .discount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.sale-page .sale-content .sale-item .sale-info .description {
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sale-page .sale-content .sale-item .sale-info .shop-now-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.sale-page .sale-content .sale-item .sale-info .shop-now-btn:hover {
+  background: #c0392b;
+}
+
+/* Black Special Offer Banner */
+
+/* Shorter Banner Section */
+.sale-page .page-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.sale-page .page-banner .banner-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.sale-page .page-banner .banner-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.sale-page .page-banner .banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sale-page .page-banner .banner-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.sale-page .page-banner .banner-btn.primary {
+  background: white;
+  color: #667eea;
+}
+
+.sale-page .page-banner .banner-btn.primary:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sale-page .page-hero {
+    height: 250px;
+  }
+  
+  .sale-page .page-hero .hero-content {
+    padding-top: 60px;
+  }
+  
+  .sale-page .page-hero .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .sale-page .sale-content .sale-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .sale-page .sale-content .sale-banner {
+    padding: 2rem 1.5rem;
+  }
+  
+  .sale-page .sale-content .sale-banner h2 {
+    font-size: 1.5rem;
+  }
+  
+  .sale-page .page-banner {
+    padding: 30px 0;
+  }
+  
+  .sale-page .page-banner .banner-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sale-page .page-banner .banner-btn {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sale-page .page-hero {
+    height: 200px;
+  }
+  
+  .sale-page .page-hero .hero-content {
+    padding-top: 50px;
+  }
+  
+  .sale-page .page-hero .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .sale-page .sale-content {
+    padding: 2rem 0;
+  }
+  
+  .sale-page .sale-content .sale-banner {
+    padding: 1.5rem 1rem;
+  }
+  
+  .sale-page .sale-content .sale-banner h2 {
+    font-size: 1.3rem;
+  }
+}

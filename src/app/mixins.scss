@@ -1,0 +1,39 @@
+// Line clamp mixin for multi-line text truncation with full browser compatibility
+@mixin line-clamp($lines: 2) {
+  // Webkit browsers (Chrome, Safari, newer Edge)
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  
+  // Firefox
+  display: -moz-box;
+  -moz-line-clamp: $lines;
+  
+  // Standard property
+  display: box;
+  line-clamp: $lines;
+  box-orient: vertical;
+  
+  // Fallback properties
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  // Additional fallback for very old browsers
+  max-height: calc(1.5em * #{$lines});
+}
+
+// Single line truncation
+@mixin single-line-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Flexible text overflow handling
+@mixin text-ellipsis($lines: 1) {
+  @if $lines == 1 {
+    @include single-line-truncate;
+  } @else {
+    @include line-clamp($lines);
+  }
+}

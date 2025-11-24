@@ -1,0 +1,42 @@
+<section class="women-page">
+  <div class="page-hero">
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&h=400&fit=crop" alt="Women's Fashion">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Women's Collection</h1>
+        <p>Discover elegant fashion for the modern woman</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="products">
+    <div class="container">
+      <div class="products-header">
+        <h2>Featured Products</h2>
+        <p>Curated selection of the finest women's fashion</p>
+      </div>
+
+      <div class="product-grid">
+        <app-product-card 
+          *ngFor="let product of womenProducts" 
+          [product]="product">
+        </app-product-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Banner Section -->
+   <section class="page-banner">
+    <div class="container">
+      <div class="banner-content">
+        <h3>Discover Your Style</h3>
+        <p>Explore our complete women's collection</p>
+        <div class="banner-actions">
+          <a routerLink="/products" class="banner-btn primary">Browse All Items</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

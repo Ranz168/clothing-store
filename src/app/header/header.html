@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/" class="logo-link">
+        <h1>GENZ STORE</h1>
+      </a>
+    </div>
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
+      <a routerLink="/men" routerLinkActive="active" class="nav-link">Men</a>
+      <a routerLink="/women" routerLinkActive="active" class="nav-link">Women</a>
+      <a routerLink="/sale" routerLinkActive="active" class="nav-link">Sale</a>
+      <a routerLink="/products" routerLinkActive="active" class="nav-link">All Products</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" (click)="toggleCart()">
+        🛒 Cart 
+        <span class="cart-count" *ngIf="totalItems > 0">{{ totalItems }}</span>
+      </button>
+    </div>
+  </div>
+</header>

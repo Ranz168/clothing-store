@@ -1,0 +1,93 @@
+/* Global Variables */
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #2c3e50;
+  --sale-color: #e74c3c;
+  --new-color: #27ae60;
+  --limited-color: #f39c12;
+  --text-light: #7f8c8d;
+  --background-light: #f8f9fa;
+  --border-color: #e9ecef;
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Shorter Banner Styles - Updated */
+.page-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.page-banner .banner-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.page-banner .banner-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.banner-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.banner-btn.primary {
+  background: white;
+  color: #667eea;
+}
+
+.banner-btn.primary:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 30px 0;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }

@@ -1,0 +1,43 @@
+<section class="sale-page">
+  <div class="page-hero">
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=1200&h=400&fit=crop" alt="Sale">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>🔥 Sale & Deals</h1>
+        <p>Don't miss out on these amazing offers!</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="sale-content">
+    <div class="container">
+      <div class="sale-grid">
+        <div *ngFor="let item of saleItems" class="sale-item">
+          <img [src]="item.image" [alt]="item.name">
+          <div class="sale-info">
+            <h3>{{ item.name }}</h3>
+            <p class="discount">{{ item.discount }}</p>
+            <p class="description">{{ item.description }}</p>
+            <button class="shop-now-btn" routerLink="/products">Shop Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shorter Banner Section -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="banner-content">
+        <h3>Limited Time Offers</h3>
+        <p>Shop now before they're gone!</p>
+        <div class="banner-actions">
+          <a routerLink="/products" class="banner-btn primary">Shop All Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

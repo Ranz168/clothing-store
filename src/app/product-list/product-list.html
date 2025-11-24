@@ -1,0 +1,75 @@
+<section class="product-list-page">
+  <div class="page-hero">
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop" alt="All Products">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>All Products</h1>
+        <p>Discover our complete collection of fashion items</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="filters">
+    <div class="container">
+      <div class="filters-container">
+        <div class="search-box">
+          <input 
+            type="text" 
+            [(ngModel)]="searchQuery" 
+            (input)="onSearchChange()"
+            placeholder="Search products...">
+        </div>
+        
+        <div class="category-filters">
+          <button 
+            *ngFor="let category of categories" 
+            [class.active]="selectedCategory === category"
+            (click)="filterByCategory(category)"
+            class="filter-btn">
+            {{ category === 'all' ? 'All Products' : category }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <div class="products-header">
+        <h2>Our Collection</h2>
+        <p>Showing {{ filteredProducts.length }} of {{ products.length }} products</p>
+      </div>
+
+      <div class="product-grid">
+        <app-product-card 
+          *ngFor="let product of filteredProducts" 
+          [product]="product">
+        </app-product-card>
+      </div>
+
+      <div *ngIf="filteredProducts.length === 0" class="empty-state">
+        <div class="empty-icon">🔍</div>
+        <h3>No products found</h3>
+        <p>Try adjusting your search or filter criteria</p>
+        <button (click)="filterByCategory('all')" class="add-to-cart">
+          Show All Products
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Banner Section -->
+    <section class="page-banner">
+    <div class="container">
+      <div class="banner-content">
+        <h3>Need Help Finding Something?</h3>
+        <p>Contact our style experts for assistance</p>
+        <div class="banner-actions">
+          <a routerLink="/about" class="banner-btn primary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

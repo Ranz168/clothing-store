@@ -1,0 +1,39 @@
+<div class="product-card">
+  <div class="product-badge new" *ngIf="product.id <= 2 || product.id === 9 || product.id === 10">New</div>
+  <div class="product-badge sale" *ngIf="product.id === 3 || product.id === 11">Sale</div>
+  <div class="product-badge limited" *ngIf="product.id === 7 || product.id === 14">Limited</div>
+  
+  <div class="product-image">
+    <img [src]="product.image" [alt]="product.name">
+  </div>
+  
+  <div class="product-info">
+    <p class="product-category">{{ product.category }}</p>
+    <h3>{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    
+    <div class="product-options">
+      <div class="option-group">
+        <label>Size:</label>
+        <select [(ngModel)]="selectedSize">
+          <option *ngFor="let size of product.sizes" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label>Color:</label>
+        <select [(ngModel)]="selectedColor">
+          <option *ngFor="let color of product.colors" [value]="color">{{ color }}</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="price-container">
+      <span class="price">${{ product.price }}</span>
+    </div>
+    
+    <button class="add-to-cart" (click)="addToCart()">
+      Add to Cart
+    </button>
+  </div>
+</div>

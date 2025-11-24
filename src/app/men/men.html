@@ -1,0 +1,42 @@
+<section class="men-page">
+  <div class="page-hero">
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1200&h=400&fit=crop" alt="Men's Fashion">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Men's Collection</h1>
+        <p>Discover premium fashion for the modern man</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="products">
+    <div class="container">
+      <div class="products-header">
+        <h2>Featured Products</h2>
+        <p>Curated selection of the finest men's fashion</p>
+      </div>
+
+      <div class="product-grid">
+        <app-product-card 
+          *ngFor="let product of menProducts" 
+          [product]="product">
+        </app-product-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Banner Section -->
+    <section class="page-banner">
+    <div class="container">
+      <div class="banner-content">
+        <h3>Elevate Your Style</h3>
+        <p>Discover more premium men's fashion</p>
+        <div class="banner-actions">
+          <a routerLink="/products" class="banner-btn primary">View All Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
