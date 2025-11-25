@@ -29,7 +29,6 @@ export class ProductCard implements OnInit {
   addToCart(): void {
     if (this.selectedSize && this.selectedColor) {
       this.cartService.addToCart(this.product, this.selectedSize, this.selectedColor);
-      alert(`${this.product.name} added to cart!`);
     }
   }
 

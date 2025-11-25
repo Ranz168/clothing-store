@@ -1,67 +1,97 @@
-<section class="about-hero">
-  <div class="container">
+<!-- Hero Section -->
+<section class="about-page">
+  <div class="page-hero">
+    <div class="hero-image">
+      <img 
+        src="https://i.pinimg.com/736x/87/2a/32/872a329735ef38d8e9797819db81e7bb.jpg" 
+        alt="GENZ STORE Fashion Collection"
+        (error)="heroImageError($event)">
+    </div>
     <div class="hero-content">
       <h1>About GENZ STORE</h1>
       <p>Your trusted partner in fashion since 2025</p>
     </div>
   </div>
-</section>
 
-<section class="about-story">
-  <div class="container">
-    <div class="story-content">
-      <h2>Our Story</h2>
-      <p>Founded in 2025, GENZ STORE started as a small boutique with a big dream: to make fashion accessible to everyone without compromising on quality or style.</p>
-      <p>Today, we're proud to serve thousands of customers worldwide, offering curated collections that blend timeless classics with the latest trends.</p>
-    </div>
-  </div>
-</section>
-
-<section class="stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div *ngFor="let stat of storeStats" class="stat-item">
-        <div class="stat-number">{{ stat.number }}</div>
-        <div class="stat-label">{{ stat.label }}</div>
+  <!-- Our Story Section -->
+  <section class="about-story">
+    <div class="container">
+      <div class="story-content">
+        <h2>Our Story</h2>
+        <p>Founded in 2025, GENZ STORE started as a small boutique with a big dream: to make fashion accessible to everyone without compromising on quality or style.</p>
+        <p>Today, we're proud to serve thousands of customers worldwide, offering curated collections that blend timeless classics with the latest trends.</p>
+      </div>
+      <div class="story-image">
+        <img 
+          src="https://i.pinimg.com/736x/ae/27/18/ae2718d0f156fd1f3c3ecdfbc51ad986.jpg" 
+          alt="Our store interior"
+          (error)="heroImageError($event)">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="team-section">
-  <div class="container">
-    <h2>Meet Our Team</h2>
-    <div class="team-grid">
-      <div *ngFor="let member of teamMembers" class="team-member">
-        <img [src]="member.image" [alt]="member.name" class="member-photo">
-        <h3>{{ member.name }}</h3>
-        <p class="member-role">{{ member.role }}</p>
-        <p class="member-description">{{ member.description }}</p>
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div *ngFor="let stat of storeStats" class="stat-item">
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="values-section">
-  <div class="container">
-    <h2>Our Values</h2>
-    <div class="values-grid">
-      <div class="value-item">
-        <h3>🛍️ Quality First</h3>
-        <p>We carefully select every item to ensure the highest quality standards.</p>
+  <!-- Meet Our Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="team-header">
+        <h2>Meet Our Team</h2>
+        <p>The passionate individuals behind GENZ STORE's success</p>
       </div>
-      <div class="value-item">
-        <h3>💚 Customer Focus</h3>
-        <p>Your satisfaction is our top priority. We're here to help you look and feel great.</p>
-      </div>
-      <div class="value-item">
-        <h3>🚀 Innovation</h3>
-        <p>We constantly evolve to bring you the latest trends and shopping experiences.</p>
-      </div>
-      <div class="value-item">
-        <h3>🌱 Sustainability</h3>
-        <p>Committed to ethical sourcing and environmentally friendly practices.</p>
+      <div class="team-grid">
+        <div *ngFor="let member of teamMembers" class="team-member">
+          <div class="member-photo-container">
+            <img 
+              [src]="member.image" 
+              [alt]="member.name" 
+              class="member-photo"
+              (error)="teamImageError($event, member)">
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p class="member-role">{{ member.role }}</p>
+          <p class="member-description">{{ member.description }}</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <h2>Our Values</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="value-icon">🛍️</div>
+          <h3>Quality First</h3>
+          <p>We carefully select every item to ensure the highest quality standards.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">💚</div>
+          <h3>Customer Focus</h3>
+          <p>Your satisfaction is our top priority. We're here to help you look and feel great.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🚀</div>
+          <h3>Innovation</h3>
+          <p>We constantly evolve to bring you the latest trends and shopping experiences.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🌱</div>
+          <h3>Sustainability</h3>
+          <p>Committed to ethical sourcing and environmentally friendly practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
